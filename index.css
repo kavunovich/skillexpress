@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html, body {
+    background: black;
+    color: white;
+    margin: 0;
+}
+
+* {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+navbar__inner img.logotype {
+    max-height: 25px;
+}
+
+h1[folder] {
+    margin-top: 50px;
+}
+
+img.avatar {
+    min-width: 35px;
+    min-height: 35px;
+    max-width: 35px;
+    max-height: 35px;
+    border-radius: 17.5px;
+    object-fit: cover;
+
+    background: var(--color-avatar-background);
+}
+
+img.medium-avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+
+    background: var(--color-avatar-background);
+}
+
+img.big-avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+    aspect-ratio: 1;
+    object-fit: cover;
+
+    background: var(--color-avatar-background);
+    margin: 0 auto;
+}
+
+input[type="file"].big-avatar {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: calc(100dvw - 45px);
+    height: calc(100dvw - 45px);
+    border-radius: 10px;
+    position: absolute;
+    opacity: 0;
+    aspect-ratio: 1;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--navbar-padding);
+}
+
+main[nocenter] {
+    align-items: initial;
+}
+
+main__inner {
+    display: block;
+    width: 100%;
+    max-width: calc(var(--max-content-width));
+}
+
+main__inner[minimize] {
+    max-width: calc(var(--max-content-width) / 2); 
+}
+
+main__inner form {
+    display: block;
+}
+
+main__inner input {
+    box-sizing: border-box;
+    width: 100%;
+    color: white;
+    height: var( --input-height);
+    background: var(--color-background);
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+main__inner textarea {
+    box-sizing: border-box;
+    width: 100%;
+    color: white;
+    height: var( --input-height);
+    background: var(--color-background);
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+main__inner input::placeholder,
+main__inner textarea::placeholder {
+    color: var(--color-placeholder);
+}
+
+main__inner button[type="submit"] {
+    font-size: 14px;
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    margin: 10px 0;
+    height: var( --input-height);
+    border: none;
+    border-radius: 10px;
+    background: var(--color-primary);
+}
+
+main__inner button[type="submit"]:active {
+    opacity: 0.6;
+}
+
+profile {
+    display: block;
+    margin-top: 30px;
+}
+
+profile__item {
+    display: block;
+}
+
+profile__item p {
+    margin: 10px 0;
+}
+
+profile__item:last-child {
+    margin-top: 10px;
+}
+
+
+profile__item h2 {
+    margin: 0;
+
+    word-break: break-all;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+profile__item username {
+    opacity: 0.6;
+}
+
+profile__item p folder {
+    opacity: 0.5;
+}
+
+notice {
+    display: block;
+    margin: 5px 0;
+    margin-bottom: 20px;
+    color: white;
+}
+
+notice-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(var(--max-content-width) / 4), 1fr));
+    gap: 0 10px;
+}
+
+notice-main__inner {
+    display: block;
+    margin: 5px 0;
+    margin-bottom: 20px;
+    color: white;
+}
+
+notice img {
+    margin-right: 10px;
+}
+
+notice h3,
+notice-main h3 {
+    margin: 10px 0;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+
+    font-size: 18px;
+}
+
+notice-main p {
+    margin: 0;
+}
+
+notice time {
+    opacity: 0.5;
+}
+
+o6 {
+    opacity: 0.6;
+}
+
+notice-main time {
+    opacity: 0.5;
+    margin-left: auto;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+price {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+firstname {
+    color: var(--color-primary);
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+desc {
+    display: block;
+    margin: 25px 0;
+    opacity: 0.9;
+}
+
+markdown li {
+    opacity: 0.9;
+}
+
+markdown blockquote::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 100%;
+    border-radius: 10px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+markdown blockquote {
+    position: relative;
+    padding-left: 15px;
+    margin: 10px 0;
+}
+
+user {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    padding: 8px;
+}
+
+user:hover, user:active {
+    background: #202020;
+    border-radius: 10px;
+}
+
+user:hover img.avatar, 
+user:active img.avatar {
+    background: #000000;
+}
+
+exit {
+    color: #c22c2c;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    display: block;
+}
+
+add {
+    width: 45px;
+    height: 45px;
+    display: block;
+    background: var(--color-primary);
+    border-radius: 23px;
+    position: fixed;
+    bottom: 25px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 35px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #000;
+    color: white;
+}
+
+bottominfo {
+    display: flex;
+}
+
+@media (min-width: 650px) {
+    profile__item img.big-avatar, input[type="file"].big-avatar {
+        width: 300px;
+        height: 300px;
+        margin: 0;
+    }
+
+    profile__item:first-child {
+        margin-right: 10px;
+    }
+
+    profile__item:last-child {
+        margin: 0;
+    }
+
+    profile__item h2 {
+        margin: 0;
+    }
+
+    profile {
+        display: flex;  
+    }
+
+    notice {
+        display: flex;
+    }
+
+    img.medium-avatar {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    notice h3,
+    notice-main h3 {
+        height: 42px;
+    }
+}

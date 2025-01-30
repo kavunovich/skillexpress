@@ -1,0 +1,31 @@
+:root {
+    --max-content-width: 900px;
+    --navbar-height: 55px;
+    --navbar-padding: 20px;
+
+    --input-height: 45px;
+
+    --color-primary: #215ad3;
+    --color-background: #131313;
+    --color-avatar-background: #202020;
+    --color-placeholder: #666666;
+}
+
+[noselect] {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+a {
+    color: var(--color-primary);
+    border-bottom: 1px solid #00000000;
+    text-decoration: none;
+    transition: border .12s;
+}
+
+a:active[animate], a:hover[animate] {
+    border-bottom: 1px solid var(--color-primary);
+}

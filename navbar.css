@@ -1,0 +1,22 @@
+navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - var(--navbar-padding) * 2);
+    height: var(--navbar-height);
+    border-bottom: 1px solid #202020;
+    padding: 0 var(--navbar-padding);
+    background: #00000090;
+    backdrop-filter: blur(15px);
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+navbar__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-content-width);
+}
